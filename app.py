@@ -139,7 +139,6 @@ if st.session_state.authenticated:
         st.session_state.api_key = None
         st.rerun()
 
-    # ---------- AI Middleware App ----------
     st.sidebar.title("⚙️ Parameters")
 
     model = st.sidebar.selectbox("Models", ["ChatGPT", "Gemini", "mistral", "LLaMA", "DeepSeek", "nvidia"])
@@ -179,3 +178,4 @@ if st.session_state.authenticated:
             st.session_state.messages.append({"role": "assistant", "model": model, "content": response})
         else:
             st.warning("⚠️ Please enter some text before submitting.")
+
